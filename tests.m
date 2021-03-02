@@ -70,7 +70,7 @@ poly = [];
 
 for i = 1:length(t)  
     rayon = R(i);
-    while (floor((baryX+(R(i)*sin(t(i)))))>0 && floor((baryY+R(i)*-cos(t(i))))>0 && floor((baryY+R(i)*-cos(t(i))))<w && floor((baryX+(R(i)*sin(t(i)))))<h &&img( floor((xbarycentre+(R(i)*sin(t(i))))), floor((ybarycentre+R(i)*-cos(t(i))))) ==spawn) ||  ( floor((xbarycentre+((R(i)+mErr)*sin(t(i)))))>0 && floor((ybarycentre+(R(i)+mErr)*-cos(t(i))))>0 && floor((ybarycentre+(R(i)+mErr)*-cos(t(i))))<w && floor((xbarycentre+((R(i)+mErr)*sin(t(i)))))<h &&img( floor((xbarycentre+((R(i)+mErr)*sin(t(i))))), floor((ybarycentre+(R(i)+mErr)*-cos(t(i))))) ==spawn)
+    while (floor((baryX+(R(i)*sin(t(i)))))>0 && floor((baryY+R(i)*-cos(t(i))))>0 && floor((baryY+R(i)*-cos(t(i))))<w && floor((baryX+(R(i)*sin(t(i)))))<h &&img( floor((baryX+(R(i)*sin(t(i))))), floor((baryY+R(i)*-cos(t(i))))) ==spawn) ||  ( floor((baryX+((R(i)+mErr)*sin(t(i)))))>0 && floor((baryY+(R(i)+mErr)*-cos(t(i))))>0 && floor((baryY+(R(i)+mErr)*-cos(t(i))))<w && floor((baryX+((R(i)+mErr)*sin(t(i)))))<h &&img( floor((baryX+((R(i)+mErr)*sin(t(i))))), floor((baryY+(R(i)+mErr)*-cos(t(i))))) ==spawn)
             R(i)=1+R(i);  
             rayon = (R(i)+1);
     end
